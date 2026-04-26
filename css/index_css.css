@@ -1,4 +1,13 @@
-section.groups {
+@import url('general_style.css');
+
+#groups {
   display: grid;
   grid-template-columns: auto auto auto;
+}
+
+#main_figure{
+  width: 1022px;
+  height: 621px;
+  border-radius: var(--window_border_radius);
+  background: var(--pal1_col2) ;
 }
