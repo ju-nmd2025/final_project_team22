@@ -23,6 +23,10 @@
   margin: 0;
 }
 
+main{
+    margin:10%
+}
+
 .finger-paint-regular {
   font-family: "Finger Paint", sans-serif;
   font-weight: 400;

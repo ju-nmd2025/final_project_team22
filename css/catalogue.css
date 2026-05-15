@@ -1,0 +1,13 @@
+#bundles{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.character_container{
+    
+}
+.character_container img{
+    width: 10%;
+    height:auto;
+}
