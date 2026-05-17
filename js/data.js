@@ -5,7 +5,7 @@ const characters_array = [
     price: 400,
     activity: ["party", "sport"],
     background: "fluff text",
-    ages: "8-12",
+    ageRange: "8-12",
     releaseYear: "2008",
   },
   {
@@ -14,7 +14,7 @@ const characters_array = [
     price: 500,
     activity: ["party", "sport"],
     background: "fluff text",
-    ages: "8-12",
+    ageRange: "8-12",
     releaseYear: "2009",
   },
   {
@@ -78,38 +78,38 @@ const bundles_array = [
     id: "bndl-0",
     name: "holder0",
     price: 1000,
-    members: ["chr-0", "chr-1", "chr-5"], // Links to character0, character1, and character5
+    members: ["chr-0", "chr-1", "chr-5"],
     activity: ["party", "sport"],
     background: "fluff text",
     ages: "6-12",
-    // acess release years of the members,
   },
   {
     id: "bndl-1",
     name: "holder1",
     price: 1200,
-    members: ["chr-0", "chr-2", "chr-4"], // Links to character0, character2, and character4
+    members: ["chr-0", "chr-2", "chr-4"],
     activity: ["sport", "baby sitting"],
     background: "fluff text",
     ages: "4-11",
-    // acess release years of the members,
-  },
-  {
-    id: "bndl-2",
-    name: "holder2",
-    price: 950,
-    members: ["chr-2", "chr-4", "chr-6"], // Links to character2, character4, and character6
-    activity: ["calm", "baby sitting"],
-    background: "fluff text",
-    ages: "4-10",
-  },
-  {
-    id: "bndl-3",
-    name: "holder3",
-    price: 1500,
-    members: ["chr-1", "chr-3", "chr-5", "chr-7"], // Links to character1, character3, character5, and character7
-    activity: ["party", "birthday"],
-    background: "fluff text",
-    ages: "8-14",
   },
 ];
+
+//get characters linked to bundles
+function getBundleMembers(bundle) {
+  return bundle.members.map((memberId) => {
+    return characters_array.find((character) => character.id === memberId);
+  });
+}
+
+// how many ppl in bundle
+function getBundleNumber(bundle) {
+  let result = getBundleMembers(bundle);
+  return result.length;
+}
+
+//filter characters that contain certain activity
+function getFilteredCharacters(filterTag) {
+  return characters_array.filter((character) => {
+    return character.activity.includes(filterTag);
+  });
+}
