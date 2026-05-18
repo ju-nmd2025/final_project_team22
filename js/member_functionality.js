@@ -29,12 +29,13 @@ fluff-data (includes info abt everything)*/
 
 window.onload = function () {
   const data = JSON.parse(localStorage.getItem("clicked_item"));
-
-switch(true){
+};
+switch (true) {
   case bundles_array:
-    //load members
-default: 
-//load standard info
+  //load members
+  //load standard info
+  default:
+  //load standard info
 }
 
 // when we press add we add the shit from clicked_item to cart array as an item

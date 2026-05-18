@@ -2,6 +2,7 @@ const characters_array = [
   {
     id: "chr-0",
     name: "character0",
+    picture: "../assets/download.png",
     price: 400,
     activity: ["party", "sport"],
     background: "fluff text",
@@ -11,6 +12,7 @@ const characters_array = [
   {
     id: "chr-1",
     name: "character1",
+    picture: "../assets/download.png",
     price: 500,
     activity: ["party", "sport"],
     background: "fluff text",
@@ -20,6 +22,7 @@ const characters_array = [
   {
     id: "chr-2",
     name: "character2",
+    picture: "../assets/download.png",
     price: 350,
     activity: ["babysitting"],
     background: "fluff text",
@@ -29,6 +32,7 @@ const characters_array = [
   {
     id: "chr-3",
     name: "character3",
+    picture: "../assets/download.png",
     price: 680,
     activity: ["party"],
     background: "fluff text",
@@ -38,6 +42,7 @@ const characters_array = [
   {
     id: "chr-4",
     name: "character4",
+    picture: "../assets/download.png",
     price: 420,
     activity: ["calm"],
     background: "fluff text",
@@ -47,6 +52,7 @@ const characters_array = [
   {
     id: "chr-5",
     name: "character5",
+    picture: "../assets/download.png",
     price: 750,
     activity: ["sports"],
     background: "fluff text",
@@ -56,6 +62,7 @@ const characters_array = [
   {
     id: "chr-6",
     name: "character6",
+    picture: "../assets/download.png",
     price: 590,
     activity: ["birthday"],
     background: "fluff text",
@@ -65,6 +72,7 @@ const characters_array = [
   {
     id: "chr-7",
     name: "character7",
+    picture: "../assets/download.png",
     price: 799,
     activity: ["party"],
     background: "fluff text",
@@ -77,6 +85,7 @@ const bundles_array = [
   {
     id: "bndl-0",
     name: "holder0",
+    picture: "../assets/download.png",
     price: 1000,
     members: ["chr-0", "chr-1", "chr-5"],
     activity: ["party", "sport"],
@@ -86,6 +95,7 @@ const bundles_array = [
   {
     id: "bndl-1",
     name: "holder1",
+    picture: "../assets/download.png",
     price: 1200,
     members: ["chr-0", "chr-2", "chr-4"],
     activity: ["sport", "baby sitting"],
@@ -121,7 +131,7 @@ function getBundleMembers(bundle) {
 
 // how many ppl in bundle
 function getBundleNumber(bundle) {
-  let result = getBundleMembers(bundle);
+  const result = getBundleMembers(bundle);
   return result.length;
 }
 
@@ -131,3 +141,17 @@ function getFilteredCharacters(filterTag) {
     return character.activity.includes(filterTag);
   });
 }
+
+//update array
+function updateCart(currentCartArray) {
+  const cartJson = JSON.stringify(currentCartArray);
+  localStorage.setItem("shoppingCart", cartJsonString);
+}
+
+//decrypt array
+function loadCart() {
+  const savedCart = localStorage.getItem("shoppingCart");
+  return savedCart ? JSON.parse(savedCart) : [];
+}
+
+//extract prices from carted objects

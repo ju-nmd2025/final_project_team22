@@ -1,13 +1,41 @@
-#bundles{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
+#bundles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.character_container{
-    
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--pal1_col5);
 }
-.character_container img{
-    width: 10%;
-    height:auto;
+
+#bundles article {
+  width: 40%;
+  overflow: clip;
+}
+
+.bundle_container img,
+.character_container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  margin: 1vh;
+}
+
+#solo_characters {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px);
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  font-size: 40pt;
+  justify-content: center;
 }
