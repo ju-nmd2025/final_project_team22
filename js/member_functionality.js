@@ -25,16 +25,17 @@ is it a bundle?
 if yes: member links
 fluff-data (includes info abt everything)*/
 
+//need a window to popup during start, remember it was picked and then show filtered items
+
 window.onload = function () {
   const data = JSON.parse(localStorage.getItem("clicked_item"));
 
-  if (data.is_bundle) {
-    //load standard shit
-    // +members
-  } else if (!data.is_bundle) {
-    //load standard shit
-  } else alert("Error"); //we presume shit is broken
-};
+switch(true){
+  case bundles_array:
+    //load members
+default: 
+//load standard info
+}
 
 // when we press add we add the shit from clicked_item to cart array as an item
 // first we parse the cart array, then we push new item and then we stringify the cart back
