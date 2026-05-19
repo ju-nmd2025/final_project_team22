@@ -1,6 +1,6 @@
 :root {
   /* pallette 1 */
-  --pl1_cola1: #ff9633;
+  --pal1_col1: #ff9633;
   --pal1_col2: #ae4202;
   --pal1_col3: #f2ece0;
   --pal1_col4: #96ae0e;
@@ -17,10 +17,20 @@
   --pal2_col7: #504a8d;
   /* general element properties */
   --window_border_radius: 30px;
+  --image_border_radius: 20px;
+  --micro_gap: 1em;
 }
 
 * {
   margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--pal1_col5);
+  min-height: 100vh;
+  justify-content: space-between;
 }
 
 main {
@@ -28,6 +38,7 @@ main {
 }
 
 .finger-paint-regular {
+  color: var(--pal2_col1);
   font-family: "Finger Paint", sans-serif;
   font-weight: 400;
   font-style: normal;

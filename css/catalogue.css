@@ -4,12 +4,6 @@
   justify-content: space-between;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--pal1_col5);
-}
-
 #bundles article {
   width: 40%;
   overflow: clip;

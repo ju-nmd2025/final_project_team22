@@ -155,3 +155,13 @@ function loadCart() {
 }
 
 //extract prices from carted objects
+//need newest cart which is an array
+//map new array where every item is replaced with its price
+let priceArray = loadedCart.map((item) => {
+  return item.price;
+});
+
+//now we need total
+const total = priceArray.reduce((runningTotal, currentPrice) => {
+  return runningTotal + currentPrice;
+}, 0);

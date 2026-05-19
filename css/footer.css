@@ -1,3 +1,11 @@
 .footer_holder {
+  padding: 1em 3em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   background-color: var(--pal2_col5);
+  gap: 2em;
+}
+
+.footer_holder p {
+  color: var(--pal1_col3);
 }
