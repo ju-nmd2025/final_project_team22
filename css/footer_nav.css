@@ -1,0 +1,34 @@
+.footer_holder {
+  height:200px;
+  background-image: url(../assets/base_footer_w14000.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+  padding: 2em 20%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+}
+
+.footer_holder article{
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+
+.footer_holder p {
+  color: var(--pal1_col3);
+}
+
+@import url(general_style.css);
+
+.nav_holder{
+  height: 200px;
+  background-image: url(../assets/base_top_w1400.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  position: relative;
+  margin-bottom: -60px;
+  z-index: 20;
+}

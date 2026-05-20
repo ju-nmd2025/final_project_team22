@@ -1,12 +1,5 @@
 @import url("general_style.css");
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--micro_gap);
-}
-
 #main_figure {
   display: flex;
   justify-content: space-evenly;
@@ -37,12 +30,18 @@ main {
   width: 100%;
   border-radius: var(--window_border_radius);
   display: flex;
-  align-items: center;
+  justify-content: center;
+}
+
+.bottomSectionContainer figure{
+  width: fit-content;
+  height: fit-content;
 }
 
 .bottomSectionContainer img {
-  max-width: 30%;
-  max-height: 100%;
+  display: block;
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: var(--image_border_radius);
 }
