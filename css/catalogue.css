@@ -4,12 +4,6 @@
   justify-content: space-between;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--pal1_col5);
-}
-
 #bundles article {
   width: 40%;
   overflow: clip;
@@ -28,14 +22,32 @@ h1 {
   margin: 1vh;
 }
 
-#solo_characters {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 100px);
-  justify-content: space-between;
+.bundle_txt_container {
+  background-image: url(../assets/big_leaf.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 20;
+  position: relative;
+  margin-top: -2em;
+  margin-right: -2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 4em;
+  height: 8em;
 }
 
-header {
-  display: flex;
-  font-size: 40pt;
-  justify-content: center;
+.character_img_container {
+  height: 5em;
+  background-color: var(--pal1_col1);
+  border-radius: var(--image_border_radius);
+  padding: 0.5em;
+}
+
+#solo_characters {
+  display: grid;
+  grid-template-columns: repeat(6, 100px);
+  justify-content: space-between;
+  gap: 1em;
 }
