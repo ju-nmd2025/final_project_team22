@@ -40,8 +40,17 @@
 
 .bottomSectionContainer img {
   display: block;
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
   object-fit: cover;
   border-radius: var(--image_border_radius);
+}
+
+.decor_holder{
+    position: relative;
+    z-index: 28; 
+}
+
+.decor_holder img{
+   object-fit: contain;
 }

@@ -1,16 +1,22 @@
 .footer_holder {
-  height:200px;
-  background-image: url(../assets/base_footer_w14000.png);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  height: 200px;
+  background-image: url(../assets/base_footer_straight_w14000.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% auto;
+  background-position: top center;
   z-index: 10;
-  padding: 2em 20%;
+  padding: 4em 22%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2em;
 }
 
-.footer_holder article{
+.footer_holder article {
   display: flex;
   flex-direction: column;
   gap: 5%;
@@ -20,15 +26,15 @@
   color: var(--pal1_col3);
 }
 
-@import url(general_style.css);
-
-.nav_holder{
-  height: 200px;
-  background-image: url(../assets/base_top_w1400.png);
+.nav_holder {
+  height: 30vw;
+  width: 100%;
+  background-image: url(../assets/justheader_top_w1400.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom center;
+  /* background-position-y: center; */
   position: relative;
-  margin-bottom: -60px;
+  margin-bottom: -80px;
   z-index: 20;
+  background-position: bottom center;
 }
