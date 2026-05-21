@@ -109,7 +109,7 @@ main {
   align-items: flex-start;
   justify-content: flex-start;
   gap: var(--micro_gap);
-  padding: 1em 1em 12% 1em;
+  padding: 1em 1em 28% 1em;
   height: auto;
   width: 100%;
   background-image: url(../assets/justheader_top_w1400.png);
