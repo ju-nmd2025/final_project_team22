@@ -68,11 +68,13 @@ a {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   background-color: var(--pal2_col5);
   min-height: 100vh;
-  position: relative;
+  /* position: relative; */
 }
 
 header {
@@ -83,6 +85,8 @@ header {
 }
 
 main {
+  grid-row: 2 / 3;
+  grid-column: 1;
   flex-grow: 1;
   gap: 2em;
   z-index: 1;
@@ -102,30 +106,54 @@ main {
 .nav_holder {
   color: var(--pal1_col3);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: var(--micro_gap);
-  height: 40vw;
+  padding: 1em 1em 12% 1em;
+  height: auto;
   width: 100%;
   background-image: url(../assets/justheader_top_w1400.png);
   background-repeat: no-repeat;
   background-size: cover;
   /* background-position-y: center; */
   position: relative;
-  margin-bottom: -10vh;
+  margin-bottom: -12rem;
   z-index: 20;
   background-position: bottom center;
 }
 
+.link_basket img,
+.link_catalogue img {
+  height: 2.8rem;
+  margin-top: 2rem;
+}
+
+.nav_holder img {
+  object-fit: cover;
+}
+
 nav {
   background-image: url(../assets/base_top_nakedsnake_updated_w1400.png);
-  height: 15em;
   background-position: bottom center;
+  height: 25vw;
+  min-height: 15rem;
+  grid-column: 1;
+  grid-row: 1;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 /* footer insert */
 .footer_holder {
+  padding: 4em 22%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+}
+
+footer {
+  grid-row: 3;
+  grid-column: 1;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -137,10 +165,6 @@ nav {
   background-size: 100% auto;
   background-position: top center;
   z-index: 10;
-  padding: 4em 22%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2em;
 }
 
 .footer_holder article {

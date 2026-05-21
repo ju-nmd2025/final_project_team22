@@ -45,6 +45,7 @@ img {
 
 .item p {
   grid-area: price;
+  text-align: end;
 }
 
 .item button {

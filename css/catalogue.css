@@ -14,6 +14,7 @@
   max-width: 100%;
   height: auto;
   display: block;
+  border-radius: var(--image_border_radius);
 }
 
 h1 {
@@ -41,7 +42,7 @@ h1 {
 .character_img_container {
   height: 5em;
   background-color: var(--pal1_col1);
-  border-radius: var(--image_border_radius);
+  border-radius: var(--window_border_radius);
   padding: 0.5em;
 }
 
@@ -50,4 +51,5 @@ h1 {
   grid-template-columns: repeat(4, 1fr);
   justify-content: space-between;
   gap: 1em;
+  margin-bottom: 3rem;
 }
