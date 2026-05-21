@@ -19,7 +19,7 @@
 }
 
 #groups {
-  height: 30vh;
+  height: 25vh;
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 1em;
@@ -31,26 +31,43 @@
   border-radius: var(--window_border_radius);
   display: flex;
   justify-content: center;
+  padding: 0.5em;
 }
 
-.bottomSectionContainer figure{
-  width: fit-content;
-  height: fit-content;
+.bottomSectionContainer figure {
+  display: flex;
+  justify-content: center;
 }
 
 .bottomSectionContainer img {
   display: block;
   max-width: 90%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   border-radius: var(--image_border_radius);
 }
 
-.decor_holder{
-    position: relative;
-    z-index: 28; 
+.decor_holder {
+  position: relative;
+  z-index: 28;
+  /* background-image: url("../assets/bush_mid_w1400.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: -5em;
+  width: 80vw; */
 }
 
-.decor_holder img{
-   object-fit: contain;
+.decor_holder img {
+  object-fit: contain;
+  position: relative;
+  width: 80vw;
+  margin-top: -5em;
+}
+
+.bush_txt {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  gap: 2em;
+  z-index: 50;
 }

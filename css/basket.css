@@ -1,0 +1,25 @@
+#cart_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--micro_gap);
+  color: var(--pal1_col3);
+}
+
+#cart_container,
+figure {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 15vw;
+}
+
+figure,
+img {
+  height: auto;
+  display: block;
+}
+
+figure img {
+  max-width: 40%;
+  border-radius: var(--image_border_radius);
+}

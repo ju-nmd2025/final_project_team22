@@ -21,16 +21,33 @@
   --micro_gap: 1em;
 }
 
+.dark_container {
+  overflow: clip;
+  border-radius: var(--window_border_radius);
+  padding: var(--micro_gap);
+  background: var(--pal1_col7);
+  border: 0.2em solid var(--pal1_col1);
+}
+
+.light_container {
+  overflow: clip;
+  border-radius: var(--window_border_radius);
+  padding: var(--micro_gap);
+  background: var(--pal1_col1);
+}
+
 * {
   margin: 0;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -42,9 +59,16 @@ body {
   position: relative;
 }
 
+header {
+  display: flex;
+  font-size: 40pt;
+  justify-content: center;
+  background-image: url(../assets/subheader_top_w1400.png);
+}
+
 main {
   flex-grow: 1;
-  gap: 2.5em;
+  gap: 2em;
   z-index: 1;
   padding: 2em 23%;
   display: flex;
@@ -55,7 +79,7 @@ main {
   background-size: 100% auto;
   background-position: top center;
   position: relative;
-  padding-bottom: 120px;
+  padding-bottom: 10em;
   box-sizing: border-box;
 }
 
@@ -72,10 +96,56 @@ main {
   font-weight: 400;
   font-style: normal;
 }
+
 nav {
   background-image: url(../assets/base_top_w1400.png);
-  height: 200px;
+  height: 15em;
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.footer_holder {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  height: 200px;
+  background-image: url(../assets/base_footer_straight_w14000.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: top center;
+  z-index: 10;
+  padding: 4em 22%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+}
+
+.footer_holder article {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+
+.footer_holder p {
+  color: var(--pal1_col3);
+}
+
+.nav_holder {
+  color: var(--pal1_col3);
+  display: flex;
+  align-items: center;
+  gap: var(--micro_gap);
+  height: 40vw;
+  width: 100%;
+  background-image: url(../assets/justheader_top_w1400.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position-y: center; */
+  position: relative;
+  margin-bottom: -10vh;
+  z-index: 20;
+  background-position: bottom center;
 }
