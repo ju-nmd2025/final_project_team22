@@ -12,7 +12,7 @@
   --pal2_col2: #f7b0d8;
   --pal2_col3: #6357df;
   --pal2_col4: #67186b;
-  --pal2_col5: #032f0c;
+  --pal2_col5: #012a15;
   --pal2_col6: #472948;
   --pal2_col7: #504a8d;
   /* general element properties */
@@ -20,7 +20,7 @@
   --image_border_radius: 20px;
   --micro_gap: 1em;
 }
-
+/* presets */
 .dark_container {
   overflow: clip;
   border-radius: var(--window_border_radius);
@@ -36,6 +36,22 @@
   background: var(--pal1_col1);
 }
 
+/* text */
+.finger-paint-regular {
+  color: var(--pal2_col1);
+  font-family: "Finger Paint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-slab-regular {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* settings for elements */
 * {
   margin: 0;
 }
@@ -74,7 +90,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("../assets/base_mid_straight_w1400.png");
+  background-image: url(../assets/base_mid_straight_updated_w1400.png);
   background-repeat: repeat-y;
   background-size: 100% auto;
   background-position: top center;
@@ -82,29 +98,33 @@ main {
   padding-bottom: 10em;
   box-sizing: border-box;
 }
-
-.finger-paint-regular {
-  color: var(--pal2_col1);
-  font-family: "Finger Paint", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.roboto-slab-regular {
-  font-family: "Roboto Slab", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+/* nav insert */
+.nav_holder {
+  color: var(--pal1_col3);
+  display: flex;
+  align-items: center;
+  gap: var(--micro_gap);
+  height: 40vw;
+  width: 100%;
+  background-image: url(../assets/justheader_top_w1400.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position-y: center; */
+  position: relative;
+  margin-bottom: -10vh;
+  z-index: 20;
+  background-position: bottom center;
 }
 
 nav {
-  background-image: url(../assets/base_top_w1400.png);
+  background-image: url(../assets/base_top_nakedsnake_updated_w1400.png);
   height: 15em;
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+/* footer insert */
 .footer_holder {
   position: absolute;
   bottom: 0;
@@ -131,21 +151,4 @@ nav {
 
 .footer_holder p {
   color: var(--pal1_col3);
-}
-
-.nav_holder {
-  color: var(--pal1_col3);
-  display: flex;
-  align-items: center;
-  gap: var(--micro_gap);
-  height: 40vw;
-  width: 100%;
-  background-image: url(../assets/justheader_top_w1400.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* background-position-y: center; */
-  position: relative;
-  margin-bottom: -10vh;
-  z-index: 20;
-  background-position: bottom center;
 }

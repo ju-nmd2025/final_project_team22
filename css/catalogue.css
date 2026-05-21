@@ -47,7 +47,7 @@ h1 {
 
 #solo_characters {
   display: grid;
-  grid-template-columns: repeat(6, 100px);
+  grid-template-columns: repeat(4, 1fr);
   justify-content: space-between;
   gap: 1em;
 }
